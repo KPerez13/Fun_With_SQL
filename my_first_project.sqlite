@@ -1,0 +1,43 @@
+#creatingtable
+CREATE TABLE friends ( 
+  id INTEGER, 
+  name TEXT,
+  birthday DATE
+);
+
+#Insertingvalues
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'Jorge GP', '2000-01-05');
+INSERT INTO friends (id,name, birthday)
+Values(3, 'Junior GP', '2002-07-21');
+
+
+#manipulatingvalues 
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+#manipulatingtable
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+#updatingemails
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1; 
+UPDATE friends 
+SET email = 'jorgegp@tmt.com'
+WHERE id = 2;
+UPDATE friends 
+SET email = 'juniorgp@tmt.com'
+WHERE id = 3;
+
+#Deleting_records_Gasps!
+DELETE FROM friends
+WHERE id = 1;
+
+#Showing Final Results 
+SELECT * 
+FROM friends; 
